@@ -7,4 +7,4 @@ Website can be found here: http://megalicious.org/repos/vsk/
 
 Note that the directories are written for the catalogue below:
 
-Or here (not editable): http://megalicious.org/vsk/
+http://megalicious.org/vsk/ (Not editable)
