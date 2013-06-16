@@ -1,0 +1,478 @@
+@charset "utf-8";
+/* Enkla flytande media
+   Obs! För flytande media krävs att du tar bort mediets höjd- och breddattribut från HTML-koden
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+
+html {
+    overflow: auto;
+}
+
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 stöder inte max-width så 100% används som standard för bredd */
+.ie6 img {
+	width:100%;
+}
+
+h2 {font-family:Tahoma, Geneva, sans-serif;
+font-size:24px;
+color:#666;
+margin-left:35px;}
+
+footer {
+	width:100%;
+	text-align:center;
+	color:#999;
+	padding:10px;
+}
+
+footer img {
+	margin-left:10px;
+	margin-top:-2px;
+}
+
+a:link#copyright,a:visited#copyright
+{
+color:#999;
+text-decoration:none;
+}
+a:hover#copyright,a:active#copyright
+{
+color:#09F;
+}
+
+.rubrik {
+	margin-top: -43px;
+	text-align:right;
+	margin-right:40px;
+	color:#999;
+}
+
+.menustyle {
+	width: 100%;
+	color:#000;
+	height:40px;
+	max-width: auto;
+	padding-left: 0.9%;
+	padding-right: 0.9%;
+	margin: auto;
+	box-shadow: 0px 2px 5px #000;
+	background-color:#000;
+	/*background-image:url(img/black_linen_v2.png);*/
+	border-top: 4px solid #000;
+	border-bottom: 4px solid #000;
+	z-index:0;
+	position: relative;
+}
+body {background-image:url('img/white_carbon.png');
+background-color:#555;
+overflow-x:hidden;}
+
+#container {width: 548px; margin:auto;
+margin-top:6px; 
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+pre {
+	font-family: "Courier New", Courier, monospace, sans-serif;
+	text-align: left;
+	font-size: 15px;
+}
+
+/*
+#headerimg {
+	/*background-image:url(random/rotate.php);
+	background-size:cover;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+}*/
+
+#bottomradius {	
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;}
+
+::selection {
+background: #09F; /* Safari */
+}
+::-moz-selection {
+background: #09F; /* Firefox */
+}
+
+/*ul#nav {margin: 0 0 0 auto;}
+ul.drop a { display:block; color: #fff; font-family:Tahoma, Geneva, sans-serif; font-size: 14px; text-decoration: none;}
+ul.drop, ul.drop li, ul.drop ul { list-style: none; margin: 0; padding: 0; ; color: #fff;}
+ul.drop { position: relative; z-index: 597; float: left; }
+ul.drop li { float: left; line-height: 1.3em; vertical-align: middle; zoom: 1; padding: 5px 10px; }
+ul.drop li.hover, ul.drop li:hover { position: relative; z-index: 599; cursor: default; background: #CCC; border-radius:6px; }
+ul.drop ul { visibility: hidden; position: absolute; top: 100%; left: 0; z-index: 598; width: 195px; background: #555; border: 1px solid #555; border-radius:6px; }
+ul.drop ul li { float: none; }
+ul.drop ul ul { top: -2px; left: 100%; }
+ul.drop li:hover > ul { visibility: visible; }*/
+ul#nav
+{
+list-style-type:none;
+margin:0;
+margin-left:300px;
+margin-top:-65px;
+padding:0;
+}
+li#nav
+{
+float:left;
+}
+a:link#nav,a:visited#nav
+{
+display:block;
+
+color:#FFFFFF;
+padding:12px;
+text-decoration:none;
+text-transform:uppercase;
+font-family: 'PT Sans', sans-serif;
+}
+a:hover#nav,a:active#nav
+{
+color:#09F;
+}
+
+.ft-prev, .ft-next { background-color: #000; padding: 0 10px; }
+
+.ft-button-ft-active { color: black; }
+
+.ft-title { padding: 10px 10px; width: 870px; text-align: left; }
+small a { 
+color: #000000; 
+text-decoration: none; }
+a { 
+color: #FFFFFF; 
+text-decoration: none; }
+a:hover { 
+text-decoration: none; 
+color: #09F; }
+
+#left_nav {
+    width:250px; }
+#body {
+    width:700px; }
+#left_nav,
+#body {
+    float:left;
+    margin:10px; }
+.collapsible,
+.page_collapsible,
+.accordion {
+    margin-right: 170px;
+	margin-left: 170px;
+    height:20px;
+    font-family:Tahoma, Geneva, sans-serif;
+	font-size:24px;
+	color:#CCC;
+    text-decoration:none;}
+.accordion-open,
+.collapse-open {
+    color: #09F;
+	cursor:pointer;
+	background:url('/vsk/img/minus-09f.png') right center no-repeat; }
+.accordion-open span,
+.collapse-open span {
+	display:block;}
+.accordion-close span,
+.collapse-close span {
+    display:block;}
+.accordion-close {
+    display:block;
+	cursor:pointer;
+    background:url('/vsk/img/plus.png') right center no-repeat;}
+.accordion-close:hover {
+ 	color:#09f;
+	background:url('/vsk/img/plus-09f.png') right center no-repeat;
+}
+div.container {
+	margin-left: 170px;
+	margin-right: 170px;
+	font-size:16px; }
+div.content {
+    font-size:.9em;
+    line-height:1.5em; }
+div.content ul li {
+    list-style-position:inside;
+    line-height:25px; }
+div.content ul li a {
+    color:#555555; }
+code {
+    overflow:auto; }
+
+/*
+.thumbs{
+	width:480px;
+	margin:60px auto 35px;
+	text-align:center;
+}
+
+.thumbs a{
+	width:120px;
+	height:120px;
+	display:inline-block;
+	border:7px solid #303030;
+	box-shadow:0 1px 3px rgba(0,0,0,0.5);
+	border-radius:4px;
+	margin: 6px 6px 40px;
+	position:relative;
+	text-decoration:none;
+	
+	background-position:center center;
+	background-repeat: no-repeat;
+	
+	background-size:cover;
+	-moz-background-size:cover;
+	-webkit-background-size:cover;
+}
+
+.thumbs a:after{
+	background-color: #303030;
+    border-radius: 7px;
+    bottom: -136px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
+    content: attr(title);
+    display: inline-block;
+    font-size: 10px;
+    max-width: 90px;
+    overflow: hidden;
+    padding: 2px 10px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+*/
+
+.thumbs { 
+	width:auto;
+	margin:10px auto 35px;
+	text-align:center; 
+	padding: 0; overflow: hidden; }
+.thumbs li { 
+	list-style: none; 
+	width:120px;
+	height:120px;
+	display:inline-block;
+	box-shadow:0 2px 3px rgba(0,0,0,0.5);
+	border-radius:4px;
+	margin: 6px 6px 0px;
+	position:relative;
+	text-decoration:none; }
+.thumbs li a { }
+.thumbs li img { display: block;
+height: 100%;
+width: 100%; }
+.thumbs li a img { border: none;}
+
+#credit{
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 8px;
+	font-size: 11px;
+	margin: 0 auto 70px;
+	opacity: 0.5;
+	padding: 12px 16px;
+	text-align: center;
+	width: 400px;
+}
+
+hr.vertical {
+    border: 0;
+    height: 410px;
+	width: 0px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#alignhr {
+margin-left: 640px;
+margin-bottom: -400px;
+}
+
+#alignmap {
+	width:425px;
+	height: auto;
+	margin-left:660px;
+	margin-top:-100px;
+	text-align:right;
+}
+
+blockquote {
+font-family: Georgia, serif;
+font-size: 18px;
+font-style: italic;
+width: 500px;
+margin: 0.25em 0;
+margin-top: 150px;
+padding: 0.25em 80px;
+line-height: 1.45;
+position: absolute;
+color: #383838;
+}
+
+blockquote:before {
+display: block;
+content: "\201C";
+font-size: 80px;
+position: absolute;
+left: 30px;
+top: -20px;
+color: #CCC;
+}
+
+.selected {
+	color: #09f;
+}
+
+#aligncenter {
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#alignedit {
+	text-align:right;
+	margin-right:95px;
+}
+
+td
+{
+padding:3px; font-size:14px;
+}
+p {font-size:14px;}
+
+
+/*
+	Egenskaper för Dreamweavers flytande stödraster
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Inspiration från Responsive Web Design av Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	och Golden Grid System av Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobillayout: Högst 480px. */
+/*
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 87.36%;
+	padding-left: 1.82%;
+	padding-right: 1.82%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#logo {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#menubg {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+/* Layout för bärbar dator: 481 px till 768 px. Ärver format från mobillayout. */
+/*
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#logo {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#menubg {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+}
+*/
+/* Layout för stationär dator: 769 px till 1 232 px. Ärver format från mobillayout och layout för bärbar dator. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 100%;
+	max-width: 1088px;
+	padding-left: 0.9%;
+	padding-right: 0.9%;
+	margin: auto;
+	background-color:#fff;
+
+	/*background-image:url(img/whitey.png)*/
+}
+
+
+
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+
+}
+#logo {
+	clear: both;
+	float: left;
+	margin-left: 10.204%;
+	width: 8.1632%;
+	display: block;
+}
+#header {
+	font-weight:bold;
+  	color:#333;
+	width:978px;
+	margin-left: auto; margin-right: auto;
+	margin-top:-24px;
+}
+#trans {
+	opacity:1;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
+}
+#trans:hover {
+	opacity:0.8;
+	filter:alpha(opacity=80); /* For IE8 and earlier */
+}
+}
