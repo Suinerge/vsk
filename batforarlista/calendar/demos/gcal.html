@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='../fullcalendar/fullcalendar.css' rel='stylesheet' />
+<link href='../fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src='../jquery/jquery-1.9.1.min.js'></script>
+<script src='../jquery/jquery-ui-1.10.2.custom.min.js'></script>
+<script src='../fullcalendar/fullcalendar.min.js'></script>
+<script src='../fullcalendar/gcal.js'></script>
+<script>
+
+	$(document).ready(function() {
+		
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+		
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,basicWeek,basicDay'
+			},
+			events: 'https://www.google.com/calendar/feeds/kgmccnutol5314an387vihrta8%40group.calendar.google.com/public/basic',
+			
+			timeFormat: 'H(:mm)',
+			
+			firstDay: 1,
+			
+			eventClick: function(event) {
+				// opens events in a popup window
+				window.open(event.url, 'gcalevent', 'width=700,height=600');
+				return false;
+			},
+			
+			loading: function(bool) {
+				if (bool) {
+					$('#loading').show();
+				}else{
+					$('#loading').hide();
+				}
+			}
+			
+		});
+		
+	});
+
+</script>
+<link href="/vsk/style.css" rel="stylesheet" type="text/css">
+<style>
+
+	body {
+		margin-top: 40px;
+		text-align: center;
+		background:rgb(255,255,255);
+		font-size: 14px;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		}
+		
+	#loading {
+		position:relative;
+		margin-left:auto;
+		margin-right:auto;
+		}
+
+	#calendar {
+		width: 900px;
+		margin: 0 auto;
+		}
+
+</style>
+</head>
+<body>
+<div id='loading' style='display:none'><img src="332.gif" alt="Laddar..." width="64" height="15"></div>
+<div id='calendar'></div>
+</body>
+</html>
